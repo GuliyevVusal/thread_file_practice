@@ -51,8 +51,8 @@ public class FileWriter implements Runnable {
 
     private void writeByIO() {
         try (BufferedWriter br = new BufferedWriter(new java.io.FileWriter(fileName, true))) {
-            for (int i = 0; i < count; i++) {// IO ile 1 fayla her 2 Thread yazanda sira ile yazirlar bu casede 100 defe
-                br.write(message + "." + System.nanoTime());// Salam sonra 100 defe sagol yazacaq
+            for (int i = 0; i < count; i++) {// IO ile 1 fayla her 2 Thread yazirlar bu casede 100 defe Salam  
+                br.write(message + "." + System.nanoTime());// 100 defe sagol yazacaq qarisiq yazacaqlar
                 br.newLine();
             }
         } catch (IOException e) {
